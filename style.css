@@ -1,0 +1,89 @@
+:root {
+    --base-color: red;
+    --text-color: orange;
+    --primary-color: yellow;
+    --secondary-color: green;
+    --color-1: blue;
+    --color-2: purple;
+    --color-3: black;
+}
+
+* {
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--text-color);
+}
+
+body {
+    padding: 2em; 
+    background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000pc, 100%); /* should help with different screen sizes */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child { /* only applies to first item of nav */
+    margin-right: auto; /* hey! fill up as much space of the right, pushing it to the left */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none; /* remove underline */
+    color: var(--text-color);
+}
+
+nav a:hover { /* when hovering links the underline comes back*/
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em, auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%); /* em= relative to font size, 
+    min+ choose whichever is smaller for device */
+    border-radius: 1em; /* giving it a curve */
+}
+
+.flex-container {
+    display:flex; /* pushed my text to the right of image hm*/
+    justify-content: center; /* horizontally */
+    align-items: center; /* vertically*/
+    flex-wrap:wrap;
+    gap: 1em;
+}
+
+header img{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: top; /* if cropping happens, 
+    focus on top part of image. crop bottom instead */
+}
+
+.text-container {
+    flex: 0 1 34em;
+    /* 0= doesnt allow text container to grow on size of text; 
+    1= allows text to shrink if needed
+    34em= prefered fixed width of text container, 
+    shrink if screen is small tho */
+}
