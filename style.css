@@ -35,8 +35,12 @@ body {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4{
    font-family: coco, 'Times New Roman', Times, serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4{
+    font-size: 1.5rem;
 }
 
 nav {
@@ -362,18 +366,14 @@ footer {
 
 .painting-grid{
     display: grid;
-    grid-template-columns:repeat(3, .5fr); /* four columns, 
+    grid-template-columns:repeat(4, 1fr); /* four columns, 
     1 fraction of available space= each section is same size */
-    grid-template-rows: repeat(8, .5fr);
+    grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-        "pic-1 pic-2 pic-3"
-        "pic-1 pic-2 pic-3"
-        "pic-1 pic-2 pic-3"
-        "desc-1 desc-2 desc-3"
-        "pic-4 desc-6 desc-6"
-        "pic-4 desc-6 desc-6"
-        "pic-4 desc-6 desc-6"
-        "desc-4 desc-6 desc-6"
+        "pic-1 pic-2 pic-3 pic-4"
+        "pic-1 pic-2 pic-3 pic-4"
+        "pic-1 pic-2 pic-3 pic-4"
+        "desc-1 desc-2 desc-3 desc-4"
 }
 
 .painting-grid img{
@@ -418,7 +418,7 @@ footer {
     .painting-grid {
      grid-template-columns:repeat(2, 1fr); /* four columns, 
     1 fraction of available space= each section is same size */
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
         "pic-1 pic-2"
         "pic-1 pic-2"
@@ -426,10 +426,6 @@ footer {
         "pic-3 pic-4"
         "pic-3 pic-4"
         "desc-3 desc-4"
-        "desc-6 desc-6"
-        "desc-6 desc-6"
-        "desc-6 desc-6"
-        "desc-6 desc-6"
     }
     .text-container h3 {
         font-size: 1.5rem;
@@ -447,9 +443,14 @@ footer {
 }
 
 #museum {
-    background-color: var(--color-1);
+    background-color: var(--color-3);
     padding: -1em;
     border-radius: .5em;
+}
+
+h4{
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 
