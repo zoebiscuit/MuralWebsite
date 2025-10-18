@@ -104,6 +104,18 @@ header img{
     shrink if screen is small tho */
 }
 
+.text-container h3 {
+    display:inline-block;
+    background-color: var(--primary-color);
+    border-radius: .5em;
+    padding: .75em 1.25em;;
+    font-size: 1.5rem;
+    margin:.5em;
+    color: white;
+    font-weight: 600;
+    width: 50%;
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -256,9 +268,9 @@ footer {
     margin-bottom: 3em;
     display: grid;
     width: 100%;
-    grid-template-columns:repeat(3, .75fr); /* four columns, 
+    grid-template-columns:repeat(3, .3fr); /* four columns, 
     1 fraction of available space= each section is same size */
-    grid-template-rows: repeat(9, .75fr);
+    grid-template-rows: repeat(9, .15fr);
     margin: .5em;
     grid-template-areas:
     "img-6 text-1 text-1"
@@ -291,13 +303,35 @@ footer {
     scale: 1.05;
 }
 
+.artist-select a{
+    text-decoration: none; /* remove underline */
+    color: var(--text-color);
+}
+
+.artist-select h2:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 0px) and (max-width:1024px) {
     .artist-select {
-        grid-template-columns:repeat(3, 1fr); /* four columns, 
+        grid-template-columns:repeat(4, .5fr); /* four columns, 
     1 fraction of available space= each section is same size */
-    grid-template-rows: repeat(9, .75fr);
+    grid-template-rows: repeat(10, .5fr);
         grid-template-areas:
-    "img-6 img-7 img-8"
+        "img-6 img-6 img-7 img-7"
+        "text-1 text-1 text-2 text-2"
+        "img-8 img-8 img-9 img-9"
+        "text-3 text-3 text-4 text-4"
+        "img-10 img-10 img-11 img-11"
+        "text-5 text-5 text-6 text-6"
+        "img-12 img-12 img-13 img-13"
+        "text-7 text-7 text-8 text-8"
+        ". img-14 img-14 ."
+        ". text-9 text-9 ."
+
+
+
+    /*"img-6 img-7 img-8"
     "img-6 img-7 img-8"
     "text-1 text-2 text-3"
     "img-9 img-10 img-11"
@@ -305,7 +339,7 @@ footer {
     "text-4 text-5 text-6"
     "img-12 img-13 img-14"
     "img-12 img-13 img-14"
-    "text-7 text-8 text-9"
+    "text-7 text-8 text-9"*/
     }
     .artist-select img {
         border: .2em solid transparent;
@@ -313,7 +347,7 @@ footer {
     }
 
     .artist-select h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -322,3 +356,100 @@ footer {
 }
 
 /* 15:42 on video, ALSO i need to fix the seperation between the boxes!! */
+
+
+
+
+.painting-grid{
+    display: grid;
+    grid-template-columns:repeat(3, .5fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+    grid-template-rows: repeat(8, .5fr);
+        grid-template-areas:
+        "pic-1 pic-2 pic-3"
+        "pic-1 pic-2 pic-3"
+        "pic-1 pic-2 pic-3"
+        "desc-1 desc-2 desc-3"
+        "pic-4 desc-6 desc-6"
+        "pic-4 desc-6 desc-6"
+        "pic-4 desc-6 desc-6"
+        "desc-4 desc-6 desc-6"
+}
+
+.painting-grid img{
+    scale: 95%;
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease; 
+    border: .5em solid transparent;
+    border-color: var(--primary-color);
+    border-radius: .5em;
+    margin: .5em;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.painting-grid img:hover {
+    scale:1.05;
+}
+
+.painting-grid a{
+    text-decoration: none;
+    color: var(--text-color);
+    margin: .5;
+}
+
+.painting-grid h3{
+    background-color: var(--color-1);
+}
+
+.painting-grid a:hover{
+    text-decoration: underline;
+}
+
+.painting-grid li::marker{
+    color: var(--text-color);
+}
+
+
+@media only screen and (min-width: 0px) and (max-width:1024px) {
+    .painting-grid {
+     grid-template-columns:repeat(2, 1fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+    grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+        "pic-1 pic-2"
+        "pic-1 pic-2"
+        "desc-1 desc-2"
+        "pic-3 pic-4"
+        "pic-3 pic-4"
+        "desc-3 desc-4"
+        "desc-6 desc-6"
+        "desc-6 desc-6"
+        "desc-6 desc-6"
+        "desc-6 desc-6"
+    }
+    .text-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .painting-grid p{
+        font-size: .75rem;
+    }
+
+    
+}
+
+#process {
+    background-color: var(--color-1);
+}
+
+#museum {
+    background-color: var(--color-1);
+    padding: -1em;
+    border-radius: .5em;
+}
+
+
