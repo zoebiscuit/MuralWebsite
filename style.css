@@ -34,6 +34,7 @@ body {
     background-color: var(--base-color);
 }
 
+
 h1, h2, h3 {
    font-family: coco, 'Times New Roman', Times, serif, Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -93,8 +94,6 @@ header img{
     border: 1em solid transparent;
     border-color: var(--primary-color);
     border-radius: .5em;
-    border-image: url(images/IMG_0883.JPG) 15 var(--primary-color);
-    border-image: url(images/IMG_1123.JPG) 15 var(--primary-color);
 }
 
 .text-container {
@@ -163,6 +162,12 @@ section p {
     flex-wrap: wrap;
     font-size: 5rem;
     text-align: center;
+}
+
+@media only screen and (min-width: 0px) and (max-width:1024px) {
+    .flex-container1 h1{
+        font-size: 2.5rem;
+    }
 }
 
 section h2 {
@@ -244,6 +249,76 @@ details p {
 footer {
     font-size: .75rem;
 }
+.artist-select {
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns:repeat(3, .75fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+    grid-template-rows: repeat(9, .75fr);
+    margin: .5em;
+    grid-template-areas:
+    "img-6 text-1 text-1"
+    "text-2 text-2 img-7"
+    "img-8 text-3 text-3 "
+    "text-4 text-4 img-9"
+    "img-10 text-5 text-5"
+    "text-6 text-6 img-11"
+    "img-12 text-7 text-7"
+    "text-8 text-8 img-13"
+    "img-14 text-9 text-9"
+}
 
+.artist-select h2 {
+    font-size: 4rem;
+}
+
+.artist-select img {
+    scale: 95%;
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease; 
+    border: .5em solid transparent;
+    border-color: var(--primary-color);
+    border-radius: .5em;
+}
+
+.artist-select img:hover {
+    scale: 1.05;
+}
+
+@media only screen and (min-width: 0px) and (max-width:1024px) {
+    .artist-select {
+        grid-template-columns:repeat(3, 1fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+    grid-template-rows: repeat(9, .75fr);
+        grid-template-areas:
+    "img-6 img-7 img-8"
+    "img-6 img-7 img-8"
+    "text-1 text-2 text-3"
+    "img-9 img-10 img-11"
+    "img-9 img-10 img-11"
+    "text-4 text-5 text-6"
+    "img-12 img-13 img-14"
+    "img-12 img-13 img-14"
+    "text-7 text-8 text-9"
+    }
+    .artist-select img {
+        border: .2em solid transparent;
+        border-color: var(--primary-color);
+    }
+
+    .artist-select h2 {
+        font-size: 1rem;
+    }
+}
+
+#artwork {
+    background-color: var(--color-1);
+}
 
 /* 15:42 on video, ALSO i need to fix the seperation between the boxes!! */
