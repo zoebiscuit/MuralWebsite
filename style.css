@@ -117,7 +117,7 @@ header img{
     margin:.5em;
     color: white;
     font-weight: 600;
-    width: 50%;
+    width: auto;
 }
 
 h1 {
@@ -139,9 +139,14 @@ h1 {
     border-radius: .5em;
     font-weight: 600;
     margin: .5em;
-    width: 50%;
+    width: auto;
     justify-content: center; /* horizontally */
     align-items: center;
+    font-size: 1.5rem;
+}
+
+.olivia-button {
+    text-align: center;
 }
 
 .secondary {
@@ -231,6 +236,8 @@ section #artwork {
     width: 100%;
     border-radius: .5em;
     transition: 100ms ease; 
+    object-fit: cover;
+    object-position: top;
 }
 
 img {
@@ -435,8 +442,19 @@ footer {
         font-size: .75rem;
     }
 
+    #muralists {
+        grid-template-columns:repeat(1, 1fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "img-1"
+        "img-2"
+        "img-3"
+    }
+    }
+
     
-}
+
 
 #process {
     background-color: var(--color-1);
@@ -453,4 +471,52 @@ h4{
     text-decoration: none;
 }
 
+ol {
+    list-style: none;
+
+}
+
+li {
+    margin-top: 1em;
+    width: auto;
+}
+
+.cta-button1 {
+    text-decoration: none;
+}
+
+.cta-button2 {
+    text-decoration: none;
+}
+
+#muralists {
+    grid-template-columns:repeat(3, 1fr); /* four columns, 
+    1 fraction of available space= each section is same size */
+    grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+        "img-1 img-2 img-3"
+}
+
+#muralists img{
+    scale: 95%;
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease; 
+    border: .5em solid transparent;
+    border-color: var(--primary-color);
+    border-radius: .5em;
+    margin: .5em;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#muralists img:hover {
+    scale: 105%;
+}
+
+#muralists-sec {
+    background-color: var(--base-color);
+}
 
